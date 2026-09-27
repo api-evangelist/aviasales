@@ -1,0 +1,76 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - legal
+  - other
+  - website
+hosts:
+- host: ad.aviasales.ru
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aviasales.ru
+  role: other
+  relation: own
+- host: api.aviasales.ru
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: aviasales.ru
+  role: api
+  relation: own
+- host: aviasales.ru
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  serves: []
+  registrable_domain: aviasales.ru
+  role: legal
+  relation: own
+- host: b2b.aviasales.ru
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aviasales.ru
+  role: other
+  relation: own
+- host: www.aviasales.ru
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Blog
+  - Support
+  - PrivacyPolicy
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: aviasales.ru
+  role: website
+  relation: own

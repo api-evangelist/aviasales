@@ -1,0 +1,25 @@
+generated: 2026-09-27
+method: probed
+source: https://www.aviasales.ru/privacy
+signals:
+  data_retention:
+    - evidence:
+        - source: https://www.aviasales.ru/privacy
+          http_status: 200
+          fetched: 2026-09-27
+          quote: "Оператор вправе не удалять данные Пользователя, необходимые для хранения в соответствии с действующим законодательством Российской Федерации."
+      note: Retains user data as required by Russian law.
+  data_subject_request:
+    - evidence:
+        - source: https://www.aviasales.ru/privacy
+          http_status: 200
+          fetched: 2026-09-27
+          quote: "обращение или запрос для получения сведений об обработке своих Персональных данных;"
+      note: Users can request information about processing of their personal data.
+  subprocessors:
+    - evidence:
+        - source: https://www.aviasales.ru/privacy
+          http_status: 200
+          fetched: 2026-09-27
+          quote: "Обработка осуществляется путем совершения Оператором и третьими лицами по его поручению таких действий..."
+      note: Processing may be performed by the operator and third parties acting on its behalf.

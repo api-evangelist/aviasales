@@ -1,23 +1,72 @@
 aid: aviasales
+
 name: Aviasales
-description: 'Aviasales is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aviasales is a leading Russian online travel service that helps users find and purchase the cheapest airline tickets. The platform aggregates offers from over 2000 airlines, covering routes to more than 190 countries, and also provides hotel bookings, travel guides, and personalized travel experiences. It serves millions of travelers annually, offering price comparisons, flexible search options, and a user-friendly interface for planning trips.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aviasales/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Travel
+- Flights
+- Booking
+- Russia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aviasales-hosts.yml
+- type: Vendors
+  url: vendors/aviasales-vendors.yml
+- type: SDKs
+  url: packages/aviasales-packages.yml
+- type: Packages
+  url: packages/aviasales-packages.yml
+- type: TermsOfService
+  url: https://aviasales.ru/terms-of-use
+- type: DomainSecurity
+  url: security/aviasales-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aviasales.ru/
+- type: Blog
+  url: https://www.aviasales.ru/psgr
+- type: Support
+  url: https://www.aviasales.ru/faq
+- type: PrivacyPolicy
+  url: https://www.aviasales.ru/privacy
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No machine‑readable API specification was found; only HTML pages such as the Terms of Service are available.
+  evidence:
+    - url: https://www.aviasales.ru/terms-of-use
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

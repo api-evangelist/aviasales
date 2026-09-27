@@ -1,0 +1,23 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (aviasales.ru,
+  security/aviasales-domain-security.yml) or its accepted GitHub org.'
+packages:
+- name: aviasales
+  registry: pypi
+  url: https://pypi.org/project/aviasales/
+  language: Python
+  official: true
+  version: 0.0.5
+  published: '2022-05-27'
+  evidence: metadata names aviasales.ru
+- name: aviasales
+  registry: npm
+  url: https://www.npmjs.com/package/aviasales
+  language: JavaScript
+  official: false
+  version: 2.0.9
+  published: '2018-11-23'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
